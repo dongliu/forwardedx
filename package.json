@@ -1,17 +1,20 @@
 {
-  "name": "forwarded",
+  "name": "forwardedx",
   "description": "Parse HTTP X-Forwarded-For header",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "contributors": [
-    "Douglas Christopher Wilson <doug@somethingdoug.com>"
+    "Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "Dong Liu <edongliu@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
     "x-forwarded-for",
+    "x-forwarded-host",
+    "x-forwarded-server",
     "http",
     "req"
   ],
-  "repository": "jshttp/forwarded",
+  "repository": "dongliu/forwardedx",
   "devDependencies": {
     "istanbul": "0.3.9",
     "mocha": "1.21.5"
@@ -26,7 +29,7 @@
     "node": ">= 0.6"
   },
   "scripts": {
-    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test": "node_modules/mocha/bin/mocha --reporter spec --bail --check-leaks test/",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
     "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
   }
